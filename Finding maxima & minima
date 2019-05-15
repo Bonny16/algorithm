@@ -1,1 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+void load_array(int arr[],int n){
+    int tem;
+    for(int i=0;i<n;i++){
+        cin>>tem;
+        arr[i]=tem;
+    }
+}
+int main()
+{
+       int n;
+    int arr[200005];
+    cout<<"enter how many elements in array :";
+    cin>>n;
+    freopen("input.txt","r",stdin);
+   load_array(arr,n);
+   for(int i=0;i<n;i++)
+     cout<<arr[i]<<" ";
+     cout<<endl;
+    int max=arr[0];
+    int min=arr[0];
+  for(int i=0;i<n;i++){
+      if(min>arr[i]){
+         min=arr[i]; }
+      }
+    for(int i=0;i<n;i++){
+      if(max<arr[i]){
+      max=arr[i];
+      }
+}
+        cout<<"Maximum Number is :"<<max<<endl;
+        cout<<"Minimum Number  is:"<<min<<endl;
+        cout<<"Number of comparison :"<<(2*n-2)<<endl;
+         return 0;
+}
+
 
